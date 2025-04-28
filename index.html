@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mashulik</title>
+    <meta name="theme-color" content="#4a6fa5">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+</head>
+<body>
+    <div class="app-container">
+        <header class="calendar-header">
+            <button id="prev-month" class="nav-button">‹</button>
+            <h1 id="current-month-year">Month Year</h1>
+            <button id="next-month" class="nav-button">›</button>
+        </header>
+        <div class="weekdays">
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+            <div>Sun</div>
+        </div>
+        <div id="calendar-grid" class="calendar-grid">
+        </div>
+        <div class="emoji-legend">
+            <div class="emoji-legend-item">
+                <span class="emoji-legend-icon"><img src="icons/icon1-arrow-down.png" alt="0-100"></span>
+                <span>&lt;100</span>
+            </div>
+            <div class="emoji-legend-item">
+                <span class="emoji-legend-icon"><img src="icons/icon2-hot-cup.png" alt="100-300"></span>
+                <span>100-300</span>
+            </div>
+            <div class="emoji-legend-item">
+                <span class="emoji-legend-icon"><img src="icons/icon3-black-paw.png" alt="300-500"></span>
+                <span>300-500</span>
+            </div>
+            <div class="emoji-legend-item">
+                <span class="emoji-legend-icon"><img src="icons/icon4-white-paw.png" alt="500-700"></span>
+                <span>500-700</span>
+            </div>
+            <div class="emoji-legend-item">
+                <span class="emoji-legend-icon"><img src="icons/icon5-flag.png" alt="700-900"></span>
+                <span>700-900</span>
+            </div>
+            <div class="emoji-legend-item">
+                <span class="emoji-legend-icon"><img src="icons/icon6-kitty.png" alt="900-1100"></span>
+                <span>900-1100</span>
+            </div>
+            <div class="emoji-legend-item">
+                <span class="emoji-legend-icon"><img src="icons/icon7-crying.png" alt="1100-1300"></span>
+                <span>1100-1300</span>
+            </div>
+            <div class="emoji-legend-item">
+                <span class="emoji-legend-icon"><img src="icons/icon8-arrow-up.png" alt=">1300"></span>
+                <span>>1300</span>
+            </div>
+            <div class="emoji-legend-item">
+                <span class="emoji-legend-icon"><img src="icons/icon8-cat-with-sign.png" alt="binge"></span>
+                <span>binge</span>
+            </div>
+        </div>
+    </div>
+    <div id="mood-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="modal-date"></h2>
+            <div class="emojis-container">
+                <div class="emoji-option" data-mood="happy"><img src="icons/icon1-arrow-down.png" alt="0-100"></div>
+                <div class="emoji-option" data-mood="sad"><img src="icons/icon2-hot-cup.png" alt="100-300"></div>
+                <div class="emoji-option" data-mood="angry"><img src="icons/icon3-black-paw.png" alt="300-500"></div>
+                <div class="emoji-option" data-mood="tired"><img src="icons/icon4-white-paw.png" alt="500-700"></div>
+                <div class="emoji-option" data-mood="neutral"><img src="icons/icon5-flag.png" alt="700-900"></div>
+                <div class="emoji-option" data-mood="excited"><img src="icons/icon6-kitty.png" alt="900-1100"></div>
+                <div class="emoji-option" data-mood="loved"><img src="icons/icon7-crying.png" alt="1100-1300"></div>
+                <div class="emoji-option" data-mood="depressed"><img src="icons/icon8-arrow-up.png" alt=">1300"></div>
+                <div class="emoji-option" data-mood="scared"><img src="icons/icon8-cat-with-sign.png" alt="binge"></div>
+            </div>
+            <button id="clear-mood" class="clear-button">Clear</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
