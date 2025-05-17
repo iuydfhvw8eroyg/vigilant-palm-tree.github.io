@@ -2,19 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Mashulik</title>
+    <title>Have a cup!</title>
     <meta name="theme-color" content="#4a6fa5">
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/icon2-hot-cup.png">
+    <link rel="apple-touch-icon" type="image/png" href="icons/icon-192.png">
 </head>
 <body>
+    <div class="sidebar-overlay"></div>
+    <aside class="sidebar">
+        <div class="sidebar-container">
+            <div class="sidebar-header">
+                <h2>Menu</h2>
+                <button class="close-sidebar">&times;</button>
+            </div>
+            <div class="sidebar-main-content">
+                <nav class="sidebar-nav">
+                    <a href="index.html" class="sidebar-link">Calendar</a>
+                    <a href="statistics.html" class="sidebar-link">Statistics</a>
+                    <a href="settings.html" class="sidebar-link">Settings</a>
+                    <a href="about.html" class="sidebar-link">About</a>
+                </nav>
+            </div>
+            <div class="sidebar-data-actions">
+                <button class="import-button">Import Data</button>
+                <button class="export-button">Export Data</button>
+            </div>
+          </div>
+    </aside>
     <div class="app-container">
+        <header class="app-header">
+            <button class="menu-button">☰</button>
+        </header>
         <header class="calendar-header">
             <button id="prev-month" class="nav-button">‹</button>
             <h1 id="current-month-year">Month Year</h1>
@@ -65,28 +89,24 @@
                 <span>>1300</span>
             </div>
             <div class="emoji-legend-item">
-                <span class="emoji-legend-icon"><img src="icons/icon8-cat-with-sign.png" alt="binge"></span>
+                <span class="emoji-legend-icon"><img src="icons/icon9-cat-with-sign.png" alt="binge"></span>
                 <span>binge</span>
             </div>
         </div>
     </div>
     <div id="mood-modal" class="modal">
         <div class="modal-content">
-            <h2 id="modal-date"></h2>
-            <div class="emojis-container">
-                <div class="emoji-option" data-mood="happy"><img src="icons/icon1-arrow-down.png" alt="0-100"></div>
-                <div class="emoji-option" data-mood="sad"><img src="icons/icon2-hot-cup.png" alt="100-300"></div>
-                <div class="emoji-option" data-mood="angry"><img src="icons/icon3-black-paw.png" alt="300-500"></div>
-                <div class="emoji-option" data-mood="tired"><img src="icons/icon4-white-paw.png" alt="500-700"></div>
-                <div class="emoji-option" data-mood="neutral"><img src="icons/icon5-flag.png" alt="700-900"></div>
-                <div class="emoji-option" data-mood="excited"><img src="icons/icon6-kitty.png" alt="900-1100"></div>
-                <div class="emoji-option" data-mood="loved"><img src="icons/icon7-crying.png" alt="1100-1300"></div>
-                <div class="emoji-option" data-mood="depressed"><img src="icons/icon8-arrow-up.png" alt=">1300"></div>
-                <div class="emoji-option" data-mood="scared"><img src="icons/icon8-cat-with-sign.png" alt="binge"></div>
+            <button id="close-modal" class="close-modal">&times;</button>
+            <div id="modal-date" class="modal-date-label"></div>
+            <input type="text" id="mood-input" placeholder="Enter {value} / binge:{value}" />
+            <div class="modal-buttons">
+                <button id="save-button">Save</button>
+                <button id="clear-button">Clear</button>
             </div>
-            <button id="clear-mood" class="clear-button">Clear</button>
         </div>
     </div>
-    <script src="app.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/data-io.js"></script>
 </body>
 </html>
