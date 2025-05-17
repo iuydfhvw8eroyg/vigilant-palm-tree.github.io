@@ -1,9 +1,15 @@
-const CACHE_NAME = 'mood-calendar-v1';
+const CACHE_NAME = 'tracking-calendar-v1.2';
 const ASSETS_TO_CACHE = [
     '/',
     '/index.html',
-    '/styles.css',
-    '/app.js',
+    '/statistics.html',
+    '/settings.html',
+    '/about.html',
+    '/css/styles.css',
+    '/js/app.js',
+    '/js/calendar.js',
+    '/js/data-io.js',
+    '/js/statistics.js',
     '/icons/icon-192.png',
     '/icons/icon-512.png',
     '/manifest.json',
@@ -15,7 +21,7 @@ const ASSETS_TO_CACHE = [
     'icons/icon6-kitty.png',
     'icons/icon7-crying.png',
     'icons/icon8-arrow-up.png',
-    'icons/icon8-cat-with-sign.png'
+    'icons/icon9-cat-with-sign.png'
 ];
 self.addEventListener('install', event => {
     event.waitUntil(
